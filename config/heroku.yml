@@ -3,6 +3,7 @@ production:
   stack: cedar
   config:
     BUNDLE_WITHOUT: "development:test"
+    DOMAIN_NAME: jit-blog-sandbox.herokuapp.com
   addons: &default_addons
     - heroku-postgresql
     - pgbackups:auto-month
@@ -12,9 +13,10 @@ production:
 staging:
   stack: cedar
   app: jit-blog-sandbox-staging
-  config: &default
+  config:
     BUNDLE_WITHOUT: "development:test"
     TZ: "Asia/Tokyo"
     RAILS_ENV: staging
     RACK_ENV: staging
+    DOMAIN_NAME: jit-blog-sandbox-staging.herokuapp.com
   addons: *default_addons
