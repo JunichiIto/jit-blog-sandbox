@@ -4,6 +4,7 @@ production:
   config:
     BUNDLE_WITHOUT: "development:test"
     DOMAIN_NAME: jit-blog-sandbox.herokuapp.com
+    TZ: "Asia/Tokyo"
   addons: &default_addons
     - heroku-postgresql
     - pgbackups:auto-month
