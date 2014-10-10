@@ -1,0 +1,20 @@
+production:
+  app: jit-blog-sandbox
+  stack: cedar
+  config:
+    BUNDLE_WITHOUT: "development:test"
+  addons: &default_addons
+    - heroku-postgresql
+    - pgbackups:auto-month
+    - papertrail
+    - newrelic
+
+staging:
+  stack: cedar
+  app: jit-blog-sandbox-staging
+  config: &default
+    BUNDLE_WITHOUT: "development:test"
+    TZ: "Asia/Tokyo"
+    RAILS_ENV: staging
+    RACK_ENV: staging
+  addons: *default_addons
