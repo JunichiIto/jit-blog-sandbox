@@ -15,6 +15,7 @@ gem 'slim-rails'
 gem 'unicorn'
 gem 'unicorn-rails'
 gem 'simple_form'
+gem 'pg'
 group :development do
   gem 'better_errors'
   gem 'binding_of_caller', :platforms=>[:mri_21]
@@ -27,7 +28,6 @@ group :development, :test do
   gem 'factory_girl_rails'
   gem 'faker'
   gem 'rspec-rails'
-  gem 'sqlite3'
 end
 group :production do
   gem 'pg'
